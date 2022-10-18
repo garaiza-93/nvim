@@ -14,7 +14,7 @@ require('tokyonight').setup({
   sidebars = { "qf", "help" },
   dim_inactive = false,
 })
-require('./plugins/plugins')
+require('plugins')
 require('autocmd')
 require('./config/treesitter-config')
 require('./settings/keybinds')
