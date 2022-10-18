@@ -1,3 +1,5 @@
+local hasTerm = false
+
 local wk=require('which-key')
 wk.setup {
   plugins = {
@@ -15,6 +17,16 @@ wk.setup {
     }
   }
 }
+
+function toggleTerm()
+  if not hasTerm then
+    hasTerm = true
+    return ':FloatermNew --wintype=split --height=0.3 --position=botright<cr>'
+  else
+    return ':FloatermToggle'
+  end
+end
+
 local mappings = {
 	e = {
     name = 'Explore',
@@ -29,7 +41,7 @@ local mappings = {
     r = {':luafile %<cr>', 'Reload Settings'},
   },
   t = { 
-    ':FloatermToggle<cr>', 'Terminal'
+    toggleTerm(), 'Toggle Terminals'
   },  
 }
 wk.register(mappings, { prefix = "<leader>" })
