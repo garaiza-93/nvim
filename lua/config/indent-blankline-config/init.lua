@@ -1,5 +1,5 @@
 require('indent_blankline').setup {
-  char = '│',
+  char = '|',
   show_end_of_line = false,
   disable_with_no_list = true,
   buftype_exclude = { 'terminal' },
