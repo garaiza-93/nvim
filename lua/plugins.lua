@@ -44,8 +44,6 @@ packer.startup({
 
     -- cmp
     use { 'hrsh7th/nvim-cmp' }
- 
-    -- nvim-cmp
     use { 'hrsh7th/cmp-buffer' }
     use { 'hrsh7th/cmp-path' }
     use { 'hrsh7th/cmp-cmdline' }
@@ -56,6 +54,12 @@ packer.startup({
     use { 'hrsh7th/cmp-nvim-lsp' }
     use { 'neovim/nvim-lspconfig', config="require('config/lsp-cmp-config')" }
     use { 'williamboman/mason-lspconfig.nvim' }
+
+    --dap
+    use { 'mfussenegger/nvim-dap' }
+
+    --linting and code actions
+    use { 'ose-elias-alvarez/null-ls.nvim' }
   end,
   
   -- packer configuration
