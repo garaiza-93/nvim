@@ -1,7 +1,7 @@
 require('bufferline').setup {
   options = {
     mode = 'tabs',
-    always_show_bufferline = true,
+    always_show_bufferline = false,
     separator_style = 'thin',
     custom_filter = function(buf_number, _)
       if 
