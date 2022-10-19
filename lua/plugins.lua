@@ -59,7 +59,7 @@ packer.startup({
     use { 'mfussenegger/nvim-dap' }
 
     --linting and code actions
-    use { 'ose-elias-alvarez/null-ls.nvim' }
+    use { 'jose-elias-alvarez/null-ls.nvim' }
   end,
   
   -- packer configuration
