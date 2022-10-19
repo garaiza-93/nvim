@@ -37,7 +37,7 @@ packer.startup({
     use { 'nvim-treesitter/nvim-treesitter', run = function() require('nvim-treesitter.install').update({ with_sync = true}) end,}
     use { 'akinsho/bufferline.nvim', tag='v2.*', requires='kyazdan142/nvim-web-devicons', event='BufWinEnter', config="require('config/bufferline-config')" }
     -- Theme
-    use { 'folke/tokyonight.nvim' }
+    use { 'folke/tokyonight.nvim', config="require('config/tokyonight-config')" }
 
     -- nvim-cmp
     use { 'neovim/nvim-lspconfig' }
