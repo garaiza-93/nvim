@@ -22,4 +22,8 @@ All plugin configurations are in the **config** directory
  - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) allows for an easier interface with nvim's treesitter and includes a variety of features. Refer to their repo for more info.
  - [bufferline](https://github.com/akinsho/bufferline.nvim) allows for neater switching between tabpages. Can be modified to switch between buffers.
  - [tokyonight](https://github.com/folke/tokyonight.nvim) is a theme for nvim and lualine.
- - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) is for code completion, and it comes bundled with a bunch of other plugins. Refer to their repo for more info.
+ - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) is for code completion, and sources from [cmp-vsnip](https://github.com/hrsh7th/cmp-vsnip)
+ - [mason](https://github.com/williamboman/mason.nvim) is for easy management of Language Server Protocols, Debugger Access Protocols, linters, and formatters for a variety of languages.
+ - [lspconfig](https://github.com/neovim/nvim-lspconfig) is available if you need it for specific LSP configurations, and mason can interface with this.
+ - [nvim-dap](https://github.com/mfussenegger/nvim-dap) allows for debugging within Vim! Remember to install the right DAP in mason.
+ - [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)...refer to their repo. It's useful, but I dunno how to describe it.
