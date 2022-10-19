@@ -54,7 +54,7 @@ packer.startup({
 
     --lsp 
     use { 'hrsh7th/cmp-nvim-lsp' }
-    use { 'neovim/nvim-lspconfig', config="require('config/nvim-cmp-config')" }
+    use { 'neovim/nvim-lspconfig', config="require('config/lsp-cmp-config')" }
     use { 'williamboman/mason-lspconfig.nvim' }
   end,
   
