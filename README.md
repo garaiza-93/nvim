@@ -20,6 +20,6 @@ All plugin configurations are in the **config** directory
  - [vim-floaterm](https://github.com/voldikss/vim-floaterm) for terminals within nvim. Personally I don't use it a lot, but you might!
  - [impatient](https://github.com/lewis6991/impatient.nvim) improves startup time through caches. I included this for future-proofing.
  - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) allows for an easier interface with nvim's treesitter and includes a variety of features. Refer to their repo for more info.
- - [bufferline](https://github.com/akinsho/bufferline.nvim) gives tabs that allow for neater switching between tabpages. Can be modified to switch between buffers.
+ - [bufferline](https://github.com/akinsho/bufferline.nvim) allows for neater switching between tabpages. Can be modified to switch between buffers.
  - [tokyonight](https://github.com/folke/tokyonight.nvim) is a theme for nvim and lualine.
  - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) is for code completion, and it comes bundled with a bunch of other plugins. Refer to their repo for more info.
