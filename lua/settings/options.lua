@@ -25,7 +25,3 @@ opt.splitbelow = true
 opt.mouse ='a'
 -- Keys
 opt.timeoutlen = 300
--- Treesitter
-vim.api.nvim_set_option_value('foldmethod', 'expr', {win=1000})
-vim.api.nvim_set_option_value('foldexpr', 'nvim_treesitter#foldexpr()', {win=1000})
-vim.api.nvim_set_option_value('foldminlines', 40, {win=1000})
