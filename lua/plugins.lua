@@ -44,6 +44,10 @@ packer.startup({
 
     -- cmp
     use { 'hrsh7th/nvim-cmp' }
+ 
+    -- nvim-cmp
+    use { 'neovim/nvim-lspconfig', config="require('config/nvim-cmp-config')" }
+    use { 'hrsh7th/cmp-nvim-lsp' }
     use { 'hrsh7th/cmp-buffer' }
     use { 'hrsh7th/cmp-path' }
     use { 'hrsh7th/cmp-cmdline' }
@@ -55,6 +59,7 @@ packer.startup({
     use { 'neovim/nvim-lspconfig' }
     use { 'williamboman/mason-lspconfig.nvim' }
   end,
+  
   -- packer configuration
   config = {
     -- packer_compiled.lua goes with the other data files. NOT in the config directory!!
