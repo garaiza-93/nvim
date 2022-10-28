@@ -16,24 +16,7 @@ new_cmd(
     group = packerGrp
   }
 )
---Source tmux config when updated,
-new_cmd(
-  { 'BufWritePost' },
-  {
-    pattern = 'tmux.conf',
-    command = '!source-tmux.sh',
-    group = tmuxGrp
-  }
-)
---Source bash aliases when updated 
-new_cmd(
-  { 'BufWritePost' },
-  {
-    pattern = '.bash_aliases',
-    command = '!source-aliases.sh',
-    group = bashGrp
-  }
-)
+
 --Workaround for treesitter because packer is weird
 new_cmd(
   { 'BufEnter', 'BufAdd', 'BufNew', 'BufNewFile', 'BufWinEnter' },
@@ -48,21 +31,3 @@ new_cmd(
     group = ts_workaroundGrp
   }
 )
--- vim.cmd([[
---     augroup packer_user_config
--- 		autocmd BufWritePost plugins.lua source ~/.config/nvim/lua/plugins/plugins.lua | PackerSync
---     augroup end
--- ]])
-
---Source the tmux config whenever it is updated
--- vim.cmd([[
--- 	augroup tmux_user_config
--- 		autocmd BufWritePost tmux.conf !source-tmux.sh
--- ]])
-
---Source .bash_alias whenever it is updated
--- vim.cmd([[
--- 	augroup bash_aliases
--- 		autocmd BufWritePost .bash_aliases silent! !source-aliases.sh
--- ]])
-
