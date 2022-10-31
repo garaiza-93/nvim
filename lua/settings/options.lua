@@ -2,7 +2,7 @@ local opt = vim.opt
 local cmd = vim.api.nvim_command
 -- Context
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 opt.scrolloff = 4
 opt.signcolumn = 'yes'
 -- Theme

@@ -36,8 +36,16 @@ packer.startup({
     use { 'voldikss/vim-floaterm' }	
     use { 'nvim-treesitter/nvim-treesitter', run = function() require('nvim-treesitter.install').update({ with_sync = true}) end,}
     use { 'akinsho/bufferline.nvim', tag='v2.*', requires='kyazdan142/nvim-web-devicons', event='BufWinEnter', config="require('config/bufferline-config')" }
+    use {
+      "nvim-neotest/neotest", 
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-treesitter/nvim-treesitter",
+        "antoinemadec/FixCursorHold.nvim"
+      }
+    }
     -- Theme
-    use { 'folke/tokyonight.nvim', config="require('config/tokyonight-config')" }
+    use { 'folke/tokyonight.nvim' }
     
     --mason
     use { 'williamboman/mason.nvim' }

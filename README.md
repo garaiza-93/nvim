@@ -27,3 +27,4 @@ All plugin configurations are in the **config** directory
  - [lspconfig](https://github.com/neovim/nvim-lspconfig) is available if you need it for specific LSP configurations, and mason can interface with this.
  - [nvim-dap](https://github.com/mfussenegger/nvim-dap) allows for debugging within Vim! Remember to install the right DAP in mason.
  - [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)...refer to their repo. It's useful, but I dunno how to describe it.
+ - [neotest](https://github.com/nvim-neotest/neotest) for unit testing, specify languages in configurations. TODO: keybinds
