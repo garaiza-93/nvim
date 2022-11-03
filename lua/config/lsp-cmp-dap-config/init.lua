@@ -25,6 +25,7 @@ cmp.setup({
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -79,14 +80,17 @@ cmp.setup.cmdline(':', {
   })
 })
 
--- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['html'].setup {
-  capabilities = capabilities
-}
 
 require('mason').setup()
+require('mason-lspconfig').setup()
+-- Automatically setup LSP servers
+require('mason-lspconfig').setup_handlers {
+  function (server_name)
+    require('lspconfig')[server_name].setup {}
+  end,
+  -- Dedicated handlers for specific servers after this line
+  -- ['server'] = function ()
+}
 require("null-ls").setup({
     sources = {
         require("null-ls").builtins.formatting.stylua,
