@@ -46,11 +46,11 @@ packer.startup({
     -- Theme
     use { 'folke/tokyonight.nvim' }
 
-    --mason
+    --LSP/DAP/Linter/Formatter package manager
     use { 'williamboman/mason.nvim' }
 
     -- cmp
-    use { 'hrsh7th/nvim-cmp' }
+    use { 'hrsh7th/nvim-cmp', config = "require('config.nvim-cmp')" }
     use { 'hrsh7th/cmp-buffer' }
     use { 'hrsh7th/cmp-path' }
     use { 'hrsh7th/cmp-cmdline' }
@@ -59,14 +59,14 @@ packer.startup({
 
     --lsp 
     use { 'hrsh7th/cmp-nvim-lsp' }
-    use { 'neovim/nvim-lspconfig', config = "require('config.lsp-cmp-dap')" }
-    use { 'williamboman/mason-lspconfig.nvim' }
+    use { 'williamboman/mason-lspconfig.nvim', config = "require('config.nvim-lspconfig')" }
+    use { 'neovim/nvim-lspconfig' }
     use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = "require('config.trouble')" }
     --dap
     use { 'mfussenegger/nvim-dap' }
 
     --linting and code actions
-    use { 'jose-elias-alvarez/null-ls.nvim' }
+    use { 'jose-elias-alvarez/null-ls.nvim', config = "require('config.null-ls')" }
     use { 'jayp0521/mason-null-ls.nvim' }
   end,
 
