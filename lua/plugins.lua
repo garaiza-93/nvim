@@ -23,19 +23,19 @@ packer.startup({
   function(use)
     use { 'lewis6991/impatient.nvim' }
     use { 'wbthomason/packer.nvim' }
-    use { 'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}, tag = 'nightly', event = 'BufWinEnter', config = "require('config/nvim-tree-config')" }
+    use { 'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}, tag = 'nightly', event = 'BufWinEnter', config = "require('config.nvim-tree')" }
     use { 'mhinz/vim-startify' }
-    use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, event = 'BufWinEnter', config = "require('config/lualine-config')" }
-    use {'folke/which-key.nvim', config = "require('config/whichkey-config')"}
-    use { 'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'}, config = "require('config/telescope-config')" }
+    use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, event = 'BufWinEnter', config = "require('config.lualine')" }
+    use {'folke/which-key.nvim', config = "require('config.whichkey')"}
+    use { 'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'}, config = "require('config.telescope')" }
     use { 'majutsushi/tagbar' }
     use { 'tpope/vim-fugitive' }
     use { 'junegunn/gv.vim' }
-    use { 'windwp/nvim-autopairs', event = 'BufWinEnter', config = "require('config/nvim-autopairs-config')" }
-    use { 'lukas-reineke/indent-blankline.nvim', config = "require('config/indent-blankline-config')" }
+    use { 'windwp/nvim-autopairs', event = 'BufWinEnter', config = "require('config.nvim-autopairs')" }
+    use { 'lukas-reineke/indent-blankline.nvim', config = "require('config.indent-blankline')" }
     use { 'voldikss/vim-floaterm' }
     use { 'nvim-treesitter/nvim-treesitter', run = function() require('nvim-treesitter.install').update({ with_sync = true}) end,}
-    use { 'akinsho/bufferline.nvim', tag = 'v2.*', requires = 'kyazdan142/nvim-web-devicons', event = 'BufWinEnter', config = "require('config/bufferline-config')" }
+    use { 'akinsho/bufferline.nvim', tag = 'v2.*', requires = 'kyazdan142/nvim-web-devicons', event = 'BufWinEnter', config = "require('config.bufferline')" }
     use {
       "nvim-neotest/neotest",
       requires = {
@@ -60,9 +60,9 @@ packer.startup({
 
     --lsp 
     use { 'hrsh7th/cmp-nvim-lsp' }
-    use { 'neovim/nvim-lspconfig', config = "require('config/lsp-cmp-dap-config')" }
+    use { 'neovim/nvim-lspconfig', config = "require('config.lsp-cmp-dap')" }
     use { 'williamboman/mason-lspconfig.nvim' }
-    use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = "require('config/trouble-config')" }
+    use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = "require('config.trouble')" }
     --dap
     use { 'mfussenegger/nvim-dap' }
 
@@ -83,7 +83,7 @@ if fresh_install then
 else
   local status, _ = pcall(require, 'packer_compiled')
   if not status then
-    vim.notify('packer_compiled.lua not found, run PackerSync!', vim.log.levels.ERROR, { title = 'nvim-config' })
+    vim.notify('packer_compiled.lua not found, run PackerSync!', vim.log.levels.ERROR, { title = 'nvim' })
   end
 end
 
