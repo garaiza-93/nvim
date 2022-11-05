@@ -4,9 +4,8 @@ require('bufferline').setup {
     always_show_bufferline = false,
     separator_style = 'thin',
     custom_filter = function(buf_number, _)
-      if 
-        vim.bo[buf_number].filetype ~= 'startify' and
-        vim.bo[buf_number].filetype ~= 'NvimTree'
+      if vim.bo[buf_number].filetype ~= 'startify' and
+          vim.bo[buf_number].filetype ~= 'NvimTree'
       then
         return true
       else
@@ -17,7 +16,7 @@ require('bufferline').setup {
     hover = {
       enabled = true,
       delay = 0,
-      reveal = {'close'},
+      reveal = { 'close' },
     }
   },
 }

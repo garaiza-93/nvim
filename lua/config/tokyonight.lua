@@ -6,10 +6,9 @@ require('tokyonight').setup({
     keywords = "italic",
     functions = "NONE",
     variables = "NONE",
-    sidebars = "dark", 
-    floats = "dark", 
+    sidebars = "dark",
+    floats = "dark",
   },
   sidebars = { "qf", "help" },
   dim_inactive = false,
 })
-

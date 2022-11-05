@@ -1,4 +1,4 @@
-local nva=require('nvim-autopairs')
+local nva = require('nvim-autopairs')
 nva.setup {
-	
+
 }

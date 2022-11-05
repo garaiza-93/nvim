@@ -1,4 +1,4 @@
-local nvt=require('nvim-tree')
+local nvt = require('nvim-tree')
 nvt.setup {
-	
+
 }

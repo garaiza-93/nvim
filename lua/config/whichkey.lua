@@ -1,6 +1,6 @@
 local hasTerm = false
 
-local wk=require('which-key')
+local wk = require('which-key')
 wk.setup {
   plugins = {
     marks = false,
@@ -18,7 +18,7 @@ wk.setup {
   }
 }
 
-function toggleTerm()
+local function toggleTerm()
   if not hasTerm then
     hasTerm = true
     return ':FloatermNew --wintype=split --height=0.3 --position=botright<cr>'
@@ -28,21 +28,25 @@ function toggleTerm()
 end
 
 local mappings = {
-	e = {
+  e = {
     name = 'Explore',
-    f = {':NvimTreeToggle<cr>', 'Files' },
-    c = {':TagbarToggle<cr>', 'Code Structure'},
-    t = {':Telescope find_files<cr>', 'Telescope Find Files'},
-    r = {':Telescope live_grep<cr>', 'Telescope Live Grep'},
-    s = {':Startify<cr>', 'Start'}
+    f = { ':NvimTreeToggle<cr>', 'Files' },
+    c = { ':TagbarToggle<cr>', 'Code Structure' },
+    t = { ':Telescope find_files<cr>', 'Telescope Find Files' },
+    r = { ':Telescope live_grep<cr>', 'Telescope Live Grep' },
+    s = { ':Startify<cr>', 'Start' }
   },
   s = {
     name = 'Settings',
-    r = {':luafile %<cr>', 'Reload Settings'},
+    r = { ':luafile %<cr>', 'Reload Settings' },
   },
   t = {
     toggleTerm(), 'Toggle Terminals'
   },
+  c = {
+    name = 'Code',
+    f = { '<cmd>lua vim.lsp.buf.format()<cr>', 'Format' },
+
+  }
 }
 wk.register(mappings, { prefix = "<leader>" })
-
