@@ -40,9 +40,9 @@ local mappings = {
     name = 'Settings',
     r = {':luafile %<cr>', 'Reload Settings'},
   },
-  t = { 
+  t = {
     toggleTerm(), 'Toggle Terminals'
-  },  
+  },
 }
 wk.register(mappings, { prefix = "<leader>" })
 
