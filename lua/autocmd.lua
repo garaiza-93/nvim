@@ -9,7 +9,10 @@ new_cmd(
   { 'BufWritePost' },
   {
     pattern = 'plugins.lua',
-    command = 'PackerSync',
+    callback = function ()
+      vim.cmd('luafile %')
+      vim.cmd{ cmd = 'PackerSync' }
+    end,
     group = packerGrp
   }
 )
