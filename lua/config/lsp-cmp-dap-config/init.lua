@@ -75,13 +75,7 @@ require('mason-lspconfig').setup_handlers {
   -- Dedicated handlers for specific servers after this line
   -- ['server'] = function ()
 }
-require("null-ls").setup({
-    sources = {
-        require("null-ls").builtins.formatting.stylua,
-        require("null-ls").builtins.diagnostics.eslint,
-        -- require("null-ls").builtins.completion.spell,
-    },
-})
+require("null-ls").setup()
 require('mason-null-ls').setup({
   automatic_installation = true,
   automatic_setup = true
