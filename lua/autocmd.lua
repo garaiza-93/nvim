@@ -3,10 +3,7 @@ local new_cmd = vim.api.nvim_create_autocmd
 
 --Groups
 local packerGrp = new_group('packer', { clear = true })
-local tmuxGrp = new_group('tmux', { clear = true })
-local bashGrp = new_group('bash', { clear = true })
 local ts_workaroundGrp = new_group('treesitter', {clear = true})
-local treeGrp = new_group('nvim-tree', {clear = true})
 --Run :PackerSync whenever plugins.lua is updated. Note that nvim has to be reloaded first.
 new_cmd(
   { 'BufWritePost' },
