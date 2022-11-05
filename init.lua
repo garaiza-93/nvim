@@ -1,5 +1,5 @@
 -- Imports
--- require('impatient')
+require('impatient')
 require('plugins')
 require('autocmd')
 -- require('./config/treesitter-config')
