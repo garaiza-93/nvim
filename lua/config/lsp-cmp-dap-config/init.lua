@@ -82,3 +82,7 @@ require("null-ls").setup({
         -- require("null-ls").builtins.completion.spell,
     },
 })
+require('mason-null-ls').setup({
+  automatic_installation = true,
+  automatic_setup = true
+})

@@ -23,21 +23,21 @@ packer.startup({
   function(use)
     use { 'lewis6991/impatient.nvim' }
     use { 'wbthomason/packer.nvim' }
-    use { 'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}, tag = 'nightly', event='BufWinEnter', config="require('config/nvim-tree-config')" }
+    use { 'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}, tag = 'nightly', event = 'BufWinEnter', config = "require('config/nvim-tree-config')" }
     use { 'mhinz/vim-startify' }
-    use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, event='BufWinEnter', config="require('config/lualine-config')" }
-    use {'folke/which-key.nvim', config="require('config/whichkey-config')"}
-    use { 'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'}, config="require('config/telescope-config')" }
-    use { 'majutsushi/tagbar' }                       
-    use { 'tpope/vim-fugitive' }                      
-    use { 'junegunn/gv.vim' }                         
-    use { 'windwp/nvim-autopairs', event='BufWinEnter', config="require('config/nvim-autopairs-config')" }
-    use { 'lukas-reineke/indent-blankline.nvim', config="require('config/indent-blankline-config')" }
-    use { 'voldikss/vim-floaterm' }	
+    use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, event = 'BufWinEnter', config = "require('config/lualine-config')" }
+    use {'folke/which-key.nvim', config = "require('config/whichkey-config')"}
+    use { 'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'}, config = "require('config/telescope-config')" }
+    use { 'majutsushi/tagbar' }
+    use { 'tpope/vim-fugitive' }
+    use { 'junegunn/gv.vim' }
+    use { 'windwp/nvim-autopairs', event = 'BufWinEnter', config = "require('config/nvim-autopairs-config')" }
+    use { 'lukas-reineke/indent-blankline.nvim', config = "require('config/indent-blankline-config')" }
+    use { 'voldikss/vim-floaterm' }
     use { 'nvim-treesitter/nvim-treesitter', run = function() require('nvim-treesitter.install').update({ with_sync = true}) end,}
-    use { 'akinsho/bufferline.nvim', tag='v2.*', requires='kyazdan142/nvim-web-devicons', event='BufWinEnter', config="require('config/bufferline-config')" }
+    use { 'akinsho/bufferline.nvim', tag = 'v2.*', requires = 'kyazdan142/nvim-web-devicons', event = 'BufWinEnter', config = "require('config/bufferline-config')" }
     use {
-      "nvim-neotest/neotest", 
+      "nvim-neotest/neotest",
       requires = {
         "nvim-lua/plenary.nvim",
         "nvim-treesitter/nvim-treesitter",
@@ -46,7 +46,7 @@ packer.startup({
     }
     -- Theme
     use { 'folke/tokyonight.nvim' }
-    
+
     --mason
     use { 'williamboman/mason.nvim' }
 
@@ -60,16 +60,17 @@ packer.startup({
 
     --lsp 
     use { 'hrsh7th/cmp-nvim-lsp' }
-    use { 'neovim/nvim-lspconfig', config="require('config/lsp-cmp-dap-config')" }
+    use { 'neovim/nvim-lspconfig', config = "require('config/lsp-cmp-dap-config')" }
     use { 'williamboman/mason-lspconfig.nvim' }
-
+    use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = "require('config/trouble-config')" }
     --dap
     use { 'mfussenegger/nvim-dap' }
 
     --linting and code actions
     use { 'jose-elias-alvarez/null-ls.nvim' }
+    use { 'jayp0521/mason-null-ls.nvim' }
   end,
-  
+
   -- packer configuration
   config = {
     -- packer_compiled.lua goes with the other data files. NOT in the config directory!!
