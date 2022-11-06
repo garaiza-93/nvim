@@ -1,5 +1,3 @@
-local hasTerm = false
-
 local wk = require('which-key')
 wk.setup {
   plugins = {
@@ -18,21 +16,12 @@ wk.setup {
   }
 }
 
-local function toggleTerm()
-  if not hasTerm then
-    hasTerm = true
-    return '<cmd>FloatermNew --wintype=split --height=0.3 --position=botright<cr>'
-  else
-    return '<cmd>FloatermToggle'
-  end
-end
-
 local mappings = {
   c = {
     name = 'Code',
     d = { '<cmd>TroubleToggle<cr>', 'Toggle Diagnostics' },
     f = { '<cmd>lua vim.lsp.buf.format()<cr>', 'Format' },
-    t = { '<cmd>TagbarToggle<cr>', 'Tags' },
+    r = { '<cmd>lua vim.lsp.buf.rename()', 'Refactor' }
   },
   e = {
     name = 'Explore',
@@ -44,7 +33,19 @@ local mappings = {
     f = { '<cmd>Telescope find_files<cr>', 'By Filename' },
     g = { '<cmd>Telescope live_grep<cr>', 'By Grep' },
   },
-  r = { '<cmd>luafile %<cr>', 'Refresh Settings' },
-  t = { toggleTerm(), 'Terminal' },
+  g = {
+    name = 'Go to',
+    d = { '<cmd>lua vim.lsp.buf.definition()<cr>', 'Definition' },
+    D = { '<cmd>lua vim.lsp.buf.declaration()<cr>', 'Declaration' },
+    i = { '<cmd>lua vim.lsp.buf.implementation()<cr>', 'Implementation' },
+    r = { '<cmd>lua vim.lsp.buf.references()<cr>', 'References' },
+    t = { '<cmd>lua vim.lsp.buf.type_defintion()<cr>', 'Type Defintion' },
+  },
+  r = { '<cmd>luafile ~/.config/nvim/init.lua<cr>', 'Refresh Settings' },
+  t = {
+    name = 'Tools',
+    a = { '<cmd>lua vim.lsp.buf.code_action()<cr>', 'Code Actions' },
+    t = { '<cmd>FloatermNew --wintype=split --height=0.3 --position=botright<cr>', 'Terminal' },
+  }
 }
 wk.register(mappings, { prefix = "<leader>" })
