@@ -21,32 +21,30 @@ wk.setup {
 local function toggleTerm()
   if not hasTerm then
     hasTerm = true
-    return ':FloatermNew --wintype=split --height=0.3 --position=botright<cr>'
+    return '<cmd>FloatermNew --wintype=split --height=0.3 --position=botright<cr>'
   else
-    return ':FloatermToggle'
+    return '<cmd>FloatermToggle'
   end
 end
 
 local mappings = {
-  e = {
-    name = 'Explore',
-    f = { ':NvimTreeToggle<cr>', 'Files' },
-    c = { ':TagbarToggle<cr>', 'Code Structure' },
-    t = { ':Telescope find_files<cr>', 'Telescope Find Files' },
-    r = { ':Telescope live_grep<cr>', 'Telescope Live Grep' },
-    s = { ':Startify<cr>', 'Start' }
-  },
-  s = {
-    name = 'Settings',
-    r = { ':luafile %<cr>', 'Reload Settings' },
-  },
-  t = {
-    toggleTerm(), 'Toggle Terminals'
-  },
   c = {
     name = 'Code',
-    f = { '<cmd>lua vim.lsp.buf.format()<cr>', 'Format' },
     d = { '<cmd>TroubleToggle<cr>', 'Toggle Diagnostics' },
-  }
+    f = { '<cmd>lua vim.lsp.buf.format()<cr>', 'Format' },
+    t = { '<cmd>TagbarToggle<cr>', 'Tags' },
+  },
+  e = {
+    name = 'Explore',
+    f = { '<cmd>NvimTreeToggle<cr>', 'Files' },
+    s = { '<cmd>Startify<cr>', 'Start' }
+  },
+  f = {
+    name = 'Find',
+    f = { '<cmd>Telescope find_files<cr>', 'By Filename' },
+    g = { '<cmd>Telescope live_grep<cr>', 'By Grep' },
+  },
+  r = { '<cmd>luafile %<cr>', 'Refresh Settings' },
+  t = { toggleTerm(), 'Terminal' },
 }
 wk.register(mappings, { prefix = "<leader>" })
