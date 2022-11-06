@@ -47,6 +47,7 @@ packer.startup({
         "antoinemadec/FixCursorHold.nvim"
       }
     }
+    use { "rafamadriz/friendly-snippets" }
     -- Theme
     use { 'folke/tokyonight.nvim' }
 
