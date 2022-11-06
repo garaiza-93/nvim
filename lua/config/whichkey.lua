@@ -46,7 +46,7 @@ local mappings = {
   c = {
     name = 'Code',
     f = { '<cmd>lua vim.lsp.buf.format()<cr>', 'Format' },
-
+    d = { '<cmd>TroubleToggle<cr>', 'Toggle Diagnostics' },
   }
 }
 wk.register(mappings, { prefix = "<leader>" })
