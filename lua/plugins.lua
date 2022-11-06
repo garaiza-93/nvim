@@ -26,11 +26,11 @@ packer.startup({
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly',
       event = 'BufWinEnter', config = "require('config.nvim-tree')" }
     use { 'mhinz/vim-startify' }
+    use { 'weilbith/nvim-floating-tag-preview', cmd = { 'Ptag', 'Ptselect', 'Ptjump', 'Psearch', 'Pedit' } }
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, event = 'BufWinEnter',
       config = "require('config.lualine')" }
     use { 'folke/which-key.nvim', config = "require('config.whichkey')" }
     use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' }, config = "require('config.telescope')" }
-    use { 'majutsushi/tagbar' }
     use { 'tpope/vim-fugitive' }
     use { 'junegunn/gv.vim' }
     use { 'windwp/nvim-autopairs', event = 'BufWinEnter', config = "require('config.nvim-autopairs')" }
@@ -55,7 +55,7 @@ packer.startup({
     use { 'williamboman/mason.nvim' }
 
     -- cmp
-    use { 'hrsh7th/nvim-cmp', config = "require('config.nvim-cmp')" }
+    use { 'hrsh7th/nvim-cmp', requires = 'quangnguyen30192/cmp-nvim-tags', config = "require('config.nvim-cmp')" }
     use { 'hrsh7th/cmp-buffer' }
     use { 'hrsh7th/cmp-path' }
     use { 'hrsh7th/cmp-cmdline' }
@@ -68,7 +68,6 @@ packer.startup({
 
     --Tags
     use { 'ludovicchabant/vim-gutentags' }
-    use { 'quangnguyen30192/cmp-nvim-tags' }
 
     --lsp
     use { 'hrsh7th/cmp-nvim-lsp' }

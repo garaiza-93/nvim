@@ -12,7 +12,6 @@ All plugin configurations are in the **config** directory
  - [lualine](https://github.com/nvim-lualine/lualine.nvim) for a customizable statusline that shows mode, filename, encoding, git status, and more!
  - [which-key](https://github.com/folke/which-key.nvim) for tracking key shortcuts and managing your own! It's likely you won't like what I have, so definitely play with this.
  - [telescope](https://github.com/nvim-telescope/telescope.nvim) for fuzzy searching in directories. Useful when you don't know the location of a file.
- - [tagbar](https://github.com/preservim/tagbar) to explore code structures easily. I haven't made a keybind to make use of this...yet. Make it yourself!
  - [vim-fugitive](https://github.com/tpope/vim-fugitive) for easy git integration in nvim. Again, I haven't made a keybind to make use of these features. Make it yourself! Again!
  - [gv](https://github.com/junegunn/gv.vim) to browse git commits. No keybinds...yet.
  - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) to make pairs of certain characters and highlight them. An absolute must-have.
@@ -30,4 +29,5 @@ All plugin configurations are in the **config** directory
  - [neotest](https://github.com/nvim-neotest/neotest) for unit testing, specify languages in configurations. TODO: keybinds
  - [trouble](https://github.com/folke/trouble.nvim) for a buffer that shows all diagnostics in one easy place. TODO: keybinds
  - [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags) for tag generation and management.
+ - [nvim-floating-tag-preview](weilbith/nvim-floating-tag-preview) adds commands to see tags in a floating window instead of taking over the window.
  ... and possibly more ...
