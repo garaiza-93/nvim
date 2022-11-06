@@ -29,3 +29,5 @@ All plugin configurations are in the **config** directory
  - [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim) lets you format code. Be sure to install the right formatter in mason.
  - [neotest](https://github.com/nvim-neotest/neotest) for unit testing, specify languages in configurations. TODO: keybinds
  - [trouble](https://github.com/folke/trouble.nvim) for a buffer that shows all diagnostics in one easy place. TODO: keybinds
+ - [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags) for tag generation and management.
+ ... and possibly more ...

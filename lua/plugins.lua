@@ -66,6 +66,10 @@ packer.startup({
     }
     use { 'saadparwaiz1/cmp_luasnip' }
 
+    --Tags
+    use { 'ludovicchabant/vim-gutentags' }
+    use { 'quangnguyen30192/cmp-nvim-tags' }
+
     --lsp
     use { 'hrsh7th/cmp-nvim-lsp' }
     use { 'williamboman/mason-lspconfig.nvim', config = "require('config.nvim-lspconfig')" }
