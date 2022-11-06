@@ -59,7 +59,11 @@ packer.startup({
     use { 'hrsh7th/cmp-buffer' }
     use { 'hrsh7th/cmp-path' }
     use { 'hrsh7th/cmp-cmdline' }
-    use { 'L3MON4D3/LuaSnip' }
+    use { 'L3MON4D3/LuaSnip',
+      config = function()
+        require('luasnip/loaders/from_vscode').load({ 'paths={~/.local/share/nvim/site/pack/packer/start/friendly-snippets' })
+      end
+    }
     use { 'saadparwaiz1/cmp_luasnip' }
 
     --lsp
