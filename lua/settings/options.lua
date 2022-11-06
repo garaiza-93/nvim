@@ -22,6 +22,11 @@ opt.shiftwidth = 2
 opt.splitright = true
 opt.splitbelow = true
 -- Mouse Support in Tmux
-opt.mouse ='a'
+opt.mouse = 'a'
 -- Keys
 opt.timeoutlen = 300
+
+-- LSP Settings
+vim.diagnostic.config({
+  virtual_text = false,
+})

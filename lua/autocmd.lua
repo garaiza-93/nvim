@@ -5,10 +5,18 @@ local new_cmd = vim.api.nvim_create_autocmd
 local packerGrp = new_group('packer', { clear = true })
 local ts_workaroundGrp = new_group('treesitter', { clear = true })
 local lspGrp = new_group('lsp', { clear = true })
+--Format file before write
 new_cmd(
   { 'BufWritePre' },
   {
     command = 'lua vim.lsp.buf.format()',
+    group = lspGrp
+  }
+)
+new_cmd(
+  { 'CursorHold' },
+  {
+    command = 'lua vim.diagnostic.open_float()',
     group = lspGrp
   }
 )
