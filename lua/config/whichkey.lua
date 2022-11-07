@@ -21,6 +21,7 @@ local mappings = {
     name = 'Code',
     d = { '<cmd>TroubleToggle<cr>', 'Toggle Diagnostics' },
     f = { '<cmd>lua vim.lsp.buf.format()<cr>', 'Format' },
+    l = { '<cmd>set rnu!<cr>', 'Toggle Relative Line Numbers' },
     r = { '<cmd>lua vim.lsp.buf.rename()', 'Refactor' }
   },
   e = {
