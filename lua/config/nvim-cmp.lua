@@ -1,6 +1,6 @@
 -- Set up nvim-cmp.
 local cmp = require('cmp')
-
+local luasnip = require('luasnip')
 vim.g.completeopt = 'menu, menuone, noselect, noinsert'
 
 cmp.setup({
@@ -23,7 +23,11 @@ cmp.setup({
       if cmp.visible() then
         local entry = cmp.get_selected_entry()
         if not entry then
-          cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+          if luasnip.expand_or_jumpable() then
+            luasnip.expand_or_jump()
+          else
+            cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+          end
         else
           cmp.confirm()
         end
