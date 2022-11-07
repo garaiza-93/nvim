@@ -65,7 +65,7 @@ packer.startup({
     }
     use { 'saadparwaiz1/cmp_luasnip' }
 
-
+    use { 'ray-x/lsp_signature.nvim', config = "require('config.lsp_signature')" }
     --lsp
     use { 'hrsh7th/cmp-nvim-lsp' }
     use { 'williamboman/mason-lspconfig.nvim', config = "require('config.nvim-lspconfig')" }
