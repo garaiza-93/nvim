@@ -21,24 +21,40 @@ local packer = require('packer')
 
 packer.startup({
   function(use)
+    --improve startup time
     use { 'lewis6991/impatient.nvim' }
+    -- packer manages itself
     use { 'wbthomason/packer.nvim' }
+    --file explorer
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly',
       event = 'BufWinEnter', config = "require('config.nvim-tree')" }
+    --greeter UI TODO: Replace with alpha.nvim as it is more customizable
     use { 'mhinz/vim-startify' }
+    --statusline
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, event = 'BufWinEnter',
       config = "require('config.lualine')" }
+    --organized keybinds
     use { 'folke/which-key.nvim', config = "require('config.whichkey')" }
+    --live grep, find files, treesitter, tags (buffer and dir), git views (files, commits, diff, branches, status, stashes),
+    --quickfix menu, LSP definitons/declaration/in&out calls/diagnostics
     use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' }, config = "require('config.telescope')" }
+    --Git actions. TODO: Replace.
     use { 'tpope/vim-fugitive' }
+    --Git commit browser. TODO: Remove, Telescope can do this
     use { 'junegunn/gv.vim' }
+    --Auto adds closing parentheses and brackets TODO:Similar plugin for HTML tags
     use { 'windwp/nvim-autopairs', event = 'BufWinEnter', config = "require('config.nvim-autopairs')" }
+    --Indent guide
     use { 'lukas-reineke/indent-blankline.nvim', config = "require('config.indent-blankline')" }
+    --Terminal in split or floating window. TODO: replace.
     use { 'voldikss/vim-floaterm' }
+    --Abstraction layer to easily configure nvim's treesitter
     use { 'nvim-treesitter/nvim-treesitter',
       run = function() require('nvim-treesitter.install').update({ with_sync = true }) end, }
+    --Adds markers to keep track to tabs.
     use { 'akinsho/bufferline.nvim', tag = 'v2.*', requires = 'kyazdan142/nvim-web-devicons', event = 'BufWinEnter',
       config = "require('config.bufferline')" }
+    --Unit testing. Haven't figured out how to use.
     use {
       "nvim-neotest/neotest",
       requires = {
@@ -46,6 +62,7 @@ packer.startup({
         "antoinemadec/FixCursorHold.nvim"
       }
     }
+    --Gives more snippets to use in luasnip
     use { "rafamadriz/friendly-snippets" }
     -- Theme
     use { 'folke/tokyonight.nvim' }
@@ -64,14 +81,16 @@ packer.startup({
       end
     }
     use { 'saadparwaiz1/cmp_luasnip' }
-
+    --Function signature hint
     use { 'ray-x/lsp_signature.nvim', config = "require('config.lsp_signature')" }
     --lsp
     use { 'hrsh7th/cmp-nvim-lsp' }
+    --used for automatic lsp setup. can also override, see config.
     use { 'williamboman/mason-lspconfig.nvim', config = "require('config.nvim-lspconfig')" }
     use { 'neovim/nvim-lspconfig' }
+    --diagnostics menu. TODO: Look into using Telescope for this.
     use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = "require('config.trouble')" }
-    --dap
+    --dap, TODO: figure out how i use this lmao
     use { 'mfussenegger/nvim-dap' }
 
     --linting and code actions
