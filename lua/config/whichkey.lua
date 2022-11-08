@@ -34,6 +34,11 @@ local mappings = {
     f = { '<cmd>Telescope find_files<cr>', 'By Filename' },
     g = { '<cmd>Telescope live_grep<cr>', 'By Grep' },
   },
+  F = {
+    name = 'Folds',
+    O = { '<cmd>require("ufo").openAllFolds()<cr>', 'Open All Folds' },
+    C = { '<cmd>require("ufo").closeAllFolds()<cr>', 'Close All Folds' },
+  },
   g = {
     name = 'Go to',
     d = { '<cmd>lua vim.lsp.buf.definition()<cr>', 'Definition' },
