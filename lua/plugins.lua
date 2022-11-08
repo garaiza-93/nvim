@@ -28,8 +28,8 @@ packer.startup({
     --file explorer
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly',
       event = 'BufWinEnter', config = "require('config.nvim-tree')" }
-    --greeter UI TODO: Replace with alpha.nvim as it is more customizable
-    use { 'mhinz/vim-startify' }
+    --greeter UI TODO:Make a badass config.
+    use { 'goolord/alpha-nvim', config = "require('config.alpha')" }
     --statusline
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, event = 'BufWinEnter',
       config = "require('config.lualine')" }

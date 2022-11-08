@@ -27,7 +27,7 @@ local general = {
   e = {
     name = 'Explore',
     f = { '<cmd>NvimTreeToggle<cr>', 'Files' },
-    s = { '<cmd>Startify<cr>', 'Start' }
+    s = { '<cmd>Alpha<cr>', 'Start' }
   },
   f = {
     name = 'Find',
