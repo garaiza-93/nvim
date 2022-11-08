@@ -16,7 +16,7 @@ wk.setup {
   }
 }
 
-local mappings = {
+local general = {
   c = {
     name = 'Code',
     d = { '<cmd>TroubleToggle<cr>', 'Toggle Diagnostics' },
@@ -34,11 +34,6 @@ local mappings = {
     f = { '<cmd>Telescope find_files<cr>', 'By Filename' },
     g = { '<cmd>Telescope live_grep<cr>', 'By Grep' },
   },
-  F = {
-    name = 'Folds',
-    O = { '<cmd>require("ufo").openAllFolds()<cr>', 'Open All Folds' },
-    C = { '<cmd>require("ufo").closeAllFolds()<cr>', 'Close All Folds' },
-  },
   g = {
     name = 'Go to',
     d = { '<cmd>lua vim.lsp.buf.definition()<cr>', 'Definition' },
@@ -52,6 +47,15 @@ local mappings = {
     name = 'Tools',
     a = { '<cmd>lua vim.lsp.buf.code_action()<cr>', 'Code Actions' },
     t = { '<cmd>FloatermNew --wintype=split --height=0.3 --position=botright<cr>', 'Terminal' },
+  },
+  z = {
+    name = 'Folds',
   }
 }
-wk.register(mappings, { prefix = "<leader>" })
+wk.register(general, { prefix = "<leader>" })
+
+local folding = {
+  R = { require('ufo').openAllFolds(), 'Open All Folds' },
+  M = { require('ufo').closeAllFolds(), 'Close All Folds' },
+}
+wk.register(folding, { prefix = "z" })

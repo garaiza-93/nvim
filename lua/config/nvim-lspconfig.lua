@@ -34,3 +34,4 @@ require('mason-lspconfig').setup_handlers {
     }
   end
 }
+require('ufo').setup()
