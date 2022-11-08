@@ -96,6 +96,9 @@ packer.startup({
     --linting and code actions
     use { 'jose-elias-alvarez/null-ls.nvim', config = "require('config.null-ls')" }
     use { 'jayp0521/mason-null-ls.nvim' }
+
+    -- LSP-based code folding
+    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
   end,
 
   -- packer configuration

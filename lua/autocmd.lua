@@ -32,18 +32,3 @@ new_cmd(
     group = packerGrp
   }
 )
-
---Workaround for treesitter because packer is weird
-new_cmd(
-  { 'BufEnter', 'BufAdd', 'BufNew', 'BufNewFile', 'BufWinEnter' },
-  {
-    callback = function()
-      vim.opt.foldmethod = 'expr'
-      vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-      vim.opt.foldnestmax = 2
-      vim.opt.foldclose = all
-      vim.opt.foldminlines = 40
-    end,
-    group = ts_workaroundGrp
-  }
-)
