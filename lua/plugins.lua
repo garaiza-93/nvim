@@ -43,8 +43,12 @@ packer.startup({
     use { 'tpope/vim-fugitive' }
     --Git commit browser. TODO: Remove, Telescope can do this
     use { 'junegunn/gv.vim' }
-    --Auto adds closing parentheses and brackets TODO:Similar plugin for HTML tags
+    --Auto adds closing parentheses and brackets TODO: Expand config
     use { 'windwp/nvim-autopairs', event = 'BufWinEnter', config = "require('config.nvim-autopairs')" }
+    --Auto add closing tags
+    use { 'windwp/nvim-ts-autotag' }
+    --Change surrounding quotes/tags.
+    use { 'kylechui/nvim-surround', tag = '*', config = "require('config.nvim-surround')" }
     --Indent guide
     use { 'lukas-reineke/indent-blankline.nvim', config = "require('config.indent-blankline')" }
     --Terminal in split or floating window. TODO: replace.

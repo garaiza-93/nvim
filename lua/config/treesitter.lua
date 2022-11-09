@@ -2,6 +2,9 @@ require('nvim-treesitter.configs').setup {
   ensure_installed = { all },
   sync_install = true,
   auto_install = true,
+  autotag = {
+    enable = true,
+  },
   highlight = {
     enable = true,
     -- disable = {},
