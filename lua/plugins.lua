@@ -26,8 +26,8 @@ packer.startup({
     -- packer manages itself
     use { 'wbthomason/packer.nvim' }
     --file explorer
-    --use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly',
-    -- event = 'BufWinEnter', config = "require('config.nvim-tree')" }
+    use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly',
+      event = 'BufWinEnter', config = "require('config.nvim-tree')" }
     --greeter UI TODO:Make a badass config.
     use { 'goolord/alpha-nvim', config = "require('config.alpha')" }
     --statusline
