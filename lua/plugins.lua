@@ -26,8 +26,8 @@ packer.startup({
     -- packer manages itself
     use { 'wbthomason/packer.nvim' }
     --file explorer
-    use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly',
-      event = 'BufWinEnter', config = "require('config.nvim-tree')" }
+    --use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }, tag = 'nightly',
+    -- event = 'BufWinEnter', config = "require('config.nvim-tree')" }
     --greeter UI TODO:Make a badass config.
     use { 'goolord/alpha-nvim', config = "require('config.alpha')" }
     --statusline
@@ -38,6 +38,7 @@ packer.startup({
     --live grep, find files, treesitter, tags (buffer and dir), git views (files, commits, diff, branches, status, stashes),
     --quickfix menu, LSP definitons/declaration/in&out calls/diagnostics
     use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' }, config = "require('config.telescope')" }
+    use { "nvim-telescope/telescope-file-browser.nvim" }
     --Git actions. TODO: Replace.
     use { 'tpope/vim-fugitive' }
     --Git commit browser. TODO: Remove, Telescope can do this
