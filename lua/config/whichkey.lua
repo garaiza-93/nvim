@@ -30,7 +30,7 @@ local general = {
     s = { '<cmd>Alpha<cr>', 'Start' }
   },
   f = {
-    name = 'Find',
+    name = 'Find with Telescope',
     f = { '<cmd>Telescope file_browser<cr>', 'By Filename' },
     g = { '<cmd>Telescope live_grep<cr>', 'By Grep' },
   },
