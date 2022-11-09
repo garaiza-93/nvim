@@ -2,7 +2,7 @@
 vim.g.mapleader = ' '
 vim.g.localleader = '\\'
 
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 
 --Returning to normal mode
 map('i', 'jk', '<ESC>', { noremap = true })
