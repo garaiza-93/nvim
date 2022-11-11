@@ -41,6 +41,7 @@ local general = {
     i = { '<cmd>lua vim.lsp.buf.implementation()<cr>', 'Implementation' },
     r = { '<cmd>lua vim.lsp.buf.references()<cr>', 'References' },
     t = { '<cmd>lua vim.lsp.buf.type_defintion()<cr>', 'Type Defintion' },
+    b = { '<cmd>pop<cr>', 'Previous Symbol' },
   },
   r = { '<cmd>luafile ~/.config/nvim/init.lua<cr>', 'Refresh Settings' },
   t = {
