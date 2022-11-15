@@ -4,6 +4,8 @@ require('lualine').setup {
     globalstatus = true,
     disabled_filetypes = { 'alpha' },
     ignore_focus = {},
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
   },
   sections = {
     lualine_a = { 'mode' },
