@@ -104,6 +104,8 @@ packer.startup({
 
     -- LSP-based code folding
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+    -- Moving between vim panes and tmux splits
+    use { 'christoomey/vim-tmux-navigator' }
   end,
 
   -- packer configuration

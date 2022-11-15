@@ -28,5 +28,5 @@ opt.timeoutlen = 300
 
 -- LSP Settings
 vim.diagnostic.config({
-  virtual_text = false,
+    virtual_text = false,
 })
