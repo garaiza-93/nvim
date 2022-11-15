@@ -31,7 +31,8 @@ local general = {
   },
   f = {
     name = 'Find with Telescope',
-    f = { '<cmd>Telescope file_browser<cr>', 'By Filename' },
+    b = { '<cmd>Telescope buffers<cr>', 'Buffers' },
+    f = { '<cmd>Telescope find_files<cr>', 'By Filename' },
     g = { '<cmd>Telescope live_grep<cr>', 'By Grep' },
   },
   g = {
