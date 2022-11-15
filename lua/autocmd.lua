@@ -44,10 +44,11 @@ new_cmd(
   { 'User' },
   {
     pattern = 'AlphaReady',
-    desc = 'disable status, tabline, and cmdline',
+    desc = 'disable tabline, and cmdline',
     callback = function()
-      vim.go.laststatus = 0
       vim.opt.showtabline = 0
+      require('lualine').hide()
+      vim.opt.laststatus=0
       vim.opt.cmdheight = 0
     end,
   }
@@ -59,8 +60,9 @@ new_cmd(
     buffer = 0,
     desc = 'enable what we disabled',
     callback = function()
-      vim.go.laststatus = 2
       vim.opt.showtabline = 2
+      vim.opt.laststatus=2
+      require('lualine').hide({ unhide=true })
       vim.opt.cmdheight = 1
     end,
   }
