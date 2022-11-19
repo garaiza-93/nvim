@@ -5,7 +5,7 @@ local packerGrp = new_group('packer', { clear = true })
 local lspGrp = new_group('lsp', { clear = true })
 
 local function conditionalFormat()
-  if string.match(vim.bo.filetype, javascript) or string.match(vim.bo.filetype, typescript) then
+  if string.match(vim.bo.filetype, "javascript") or string.match(vim.bo.filetype, "typescript") then
     vim.cmd('EslintFixAll') -- if eslint_lsp is used. i use eslint_lsp, i dunno about you.
   else
     vim.cmd('lua vim.lsp.buf.format()')
@@ -48,7 +48,7 @@ new_cmd(
     callback = function()
       vim.opt.showtabline = 0
       require('lualine').hide()
-      vim.opt.laststatus=0
+      vim.opt.laststatus = 0
       vim.opt.cmdheight = 0
     end,
   }
@@ -61,8 +61,8 @@ new_cmd(
     desc = 'enable what we disabled',
     callback = function()
       vim.opt.showtabline = 2
-      vim.opt.laststatus=2
-      require('lualine').hide({ unhide=true })
+      vim.opt.laststatus = 2
+      require('lualine').hide({ unhide = true })
       vim.opt.cmdheight = 1
     end,
   }
