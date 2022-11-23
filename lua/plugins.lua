@@ -41,18 +41,16 @@ packer.startup({
     use { "nvim-telescope/telescope-file-browser.nvim" }
     --Git actions. TODO: Replace.
     use { 'tpope/vim-fugitive' }
-    --Git commit browser. TODO: Remove, Telescope can do this
-    use { 'junegunn/gv.vim' }
     --Auto adds closing parentheses and brackets TODO: Expand config
-    use { 'windwp/nvim-autopairs', event = 'BufWinEnter', config = "require('config.nvim-autopairs')" }
+    use { 'windwp/nvim-autopairs', event = 'BufWinEnter', config = "require('config.autopairs')" }
     --Auto add closing tags
     use { 'windwp/nvim-ts-autotag' }
     --Change surrounding quotes/tags.
-    use { 'kylechui/nvim-surround', tag = '*', config = "require('config.nvim-surround')" }
+    use { 'kylechui/nvim-surround', tag = '*', config = "require('config.surround')" }
     --Indent guide
     use { 'lukas-reineke/indent-blankline.nvim', config = "require('config.indent-blankline')" }
-    --Terminal in split or floating window. TODO: replace.
-    use { 'voldikss/vim-floaterm' }
+    --Terminal in split or floating window.
+    use { 'akinsho/toggleterm.nvim' }
     --Abstraction layer to easily configure nvim's treesitter
     use { 'nvim-treesitter/nvim-treesitter',
       run = function() require('nvim-treesitter.install').update({ with_sync = true }) end, }
@@ -76,7 +74,7 @@ packer.startup({
     use { 'williamboman/mason.nvim' }
 
     -- cmp
-    use { 'hrsh7th/nvim-cmp', config = "require('config.nvim-cmp')" }
+    use { 'hrsh7th/nvim-cmp', config = "require('config.cmp')" }
     use { 'hrsh7th/cmp-buffer' }
     use { 'hrsh7th/cmp-path' }
     use { 'hrsh7th/cmp-cmdline' }
@@ -91,7 +89,7 @@ packer.startup({
     --lsp
     use { 'hrsh7th/cmp-nvim-lsp' }
     --used for automatic lsp setup. can also override, see config.
-    use { 'williamboman/mason-lspconfig.nvim', config = "require('config.nvim-lspconfig')" }
+    use { 'williamboman/mason-lspconfig.nvim', config = "require('config.lspconfig')" }
     use { 'neovim/nvim-lspconfig' }
     --diagnostics menu. TODO: Look into using Telescope for this.
     use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = "require('config.trouble')" }
