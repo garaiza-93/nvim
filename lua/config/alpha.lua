@@ -44,9 +44,10 @@ local purple = 'Identifier'
 dashboard.section.header.val = logo
 dashboard.section.header.opts.hl = purple
 dashboard.section.buttons.val = {
-    dashboard.button( "e", "  > New file" , ":ene <BAR> startinsert <CR>"),
-    dashboard.button( "f", "  > Find file", ":cd $HOME/Workspace | Telescope find_files<CR>"),
-    dashboard.button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
-    dashboard.button( "q", "  > Quit NVIM", ":qa<CR>"),
+  dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
+  dashboard.button("f", "  > Find file", ":cd $HOME | Telescope find_files<CR>"),
+  dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
+  dashboard.button('c', "⚙  > Configuration", ":cd $HOME/.config/nvim | :e init.lua<CR>"),
+  dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
 }
 alpha.setup(dashboard.opts)
