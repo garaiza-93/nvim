@@ -34,7 +34,8 @@ new_cmd(
     pattern = 'plugins.lua',
     callback = function()
       vim.cmd('luafile %')
-      vim.cmd { cmd = 'PackerSync' }
+      vim.cmd('PackerCompile')
+      vim.cmd('PackerUpdate')
     end,
     group = packerGrp
   }
