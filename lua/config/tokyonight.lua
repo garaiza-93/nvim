@@ -1,5 +1,5 @@
 require('tokyonight').setup({
-  style = 'night',
+  style = 'moon',
   terminal_colors = true,
   styles = {
     comments = "italic",
