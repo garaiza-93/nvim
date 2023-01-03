@@ -8,7 +8,7 @@ opt.signcolumn = 'yes'
 -- Theme
 opt.syntax = 'ON'
 opt.termguicolors = true
-cmd('colorscheme tokyonight')
+cmd('colorscheme tokyonight-night')
 -- Search
 opt.ignorecase = true
 opt.smartcase = true
@@ -25,7 +25,8 @@ opt.splitbelow = true
 opt.mouse = 'a'
 -- Keys
 opt.timeoutlen = 300
-
+--Clipboard
+opt.clipboard:append { "unnamedplus" }
 -- LSP Settings
 vim.diagnostic.config({
     virtual_text = false,
