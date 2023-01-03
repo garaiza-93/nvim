@@ -23,6 +23,8 @@ packer.startup({
   function(use)
     --improve startup time
     use { 'lewis6991/impatient.nvim' }
+    -- Nix syntax highlighting and indenting
+    use { 'LnL7/vim-nix' }
     -- packer manages itself
     use { 'wbthomason/packer.nvim' }
     --file explorer
