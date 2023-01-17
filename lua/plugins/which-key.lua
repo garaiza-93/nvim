@@ -2,6 +2,7 @@ return {
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
+    dependencies = { 'nvim-telescope/telescope.nvim' },
     config = function()
       local wk = require('which-key')
       wk.setup {

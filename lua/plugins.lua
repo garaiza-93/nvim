@@ -1,9 +1,4 @@
 return {
---    --statusline
---    --live grep, find files, treesitter, tags (buffer and dir), git views (files, commits, diff, branches, status, stashes),
---    --quickfix menu, LSP definitons/declaration/in&out calls/diagnostics
---     { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
---     { "nvim-telescope/telescope-file-browser.nvim" },
 --    --Git actions. TODO: Replace.
 --     { 'tpope/vim-fugitive' },
 --    --Auto adds closing parentheses and brackets TODO: Expand config
