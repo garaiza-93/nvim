@@ -1,6 +1,8 @@
 --guess my favorite eva
 return {
-  { "goolord/alpha-nvim", config = function()
+  { "goolord/alpha-nvim", 
+    dependencies = { 'nvim-telescope/telescope.nvim' },
+    config = function()
       local alpha = require('alpha')
       local dashboard = require("alpha.themes.dashboard")
 
