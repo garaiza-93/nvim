@@ -1,13 +1,6 @@
 return {
-    -- Theme
-     { 'folke/tokyonight.nvim', lazy = false, priority = 1000, config = function() vim.cmd([[colorscheme tokyonight-night]]) end},
---    --file explorer
---     { 'kyazdani42/nvim-tree.lua', dependencies = { 'kyazdani42/nvim-web-devicons' },  version = 'nightly', event = 'BufWinEnter' },
---
 --    --statusline
 --     { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons', opt = true }, event = 'BufWinEnter' },
---    --organized keybinds
---     { 'folke/which-key.nvim', lazy = false },
 --    --live grep, find files, treesitter, tags (buffer and dir), git views (files, commits, diff, branches, status, stashes),
 --    --quickfix menu, LSP definitons/declaration/in&out calls/diagnostics
 --     { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
