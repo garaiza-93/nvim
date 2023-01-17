@@ -12,7 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 -- Imports
-require('autocmd')
+--require('autocmd')
 require('./settings/keybinds')
 require('./settings/globals')
 require('./settings/options')
