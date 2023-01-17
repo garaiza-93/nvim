@@ -8,7 +8,6 @@ opt.signcolumn = 'yes'
 -- Theme
 opt.syntax = 'ON'
 opt.termguicolors = true
-cmd('colorscheme tokyonight-night')
 -- Search
 opt.ignorecase = true
 opt.smartcase = true
