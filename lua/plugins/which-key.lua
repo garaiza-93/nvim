@@ -31,7 +31,7 @@ return {
         },
         e = {
           name = 'Explore',
-          f = { '<cmd>NvimTreeToggle<cr>', 'File Tree' },
+          -- f = { '<cmd>NvimTreeToggle<cr>', 'File Tree' },
           s = { '<cmd>Alpha<cr>', 'Start' }
         },
         f = {
