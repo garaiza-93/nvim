@@ -52,7 +52,7 @@ packer.startup({
     --Indent guide
     use { 'lukas-reineke/indent-blankline.nvim', config = "require('config.indent-blankline')" }
     --Terminal in split or floating window.
-    use { 'akinsho/toggleterm.nvim' }
+    use { 'akinsho/toggleterm.nvim', keys = {'n', '<leader>fa'}}
     --Abstraction layer to easily configure nvim's treesitter
     use { 'nvim-treesitter/nvim-treesitter',
       run = function() require('nvim-treesitter.install').update({ with_sync = true }) end, }
@@ -103,9 +103,7 @@ packer.startup({
     use { 'jayp0521/mason-null-ls.nvim' }
 
     -- LSP-based code folding
-    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
-    -- Moving between vim panes and tmux splits
-    use { 'christoomey/vim-tmux-navigator' }
+    -- use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
   end,
 
   -- packer configuration

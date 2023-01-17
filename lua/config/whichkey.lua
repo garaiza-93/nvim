@@ -56,8 +56,8 @@ local general = {
 }
 wk.register(general, { prefix = "<leader>" })
 
-local folding = {
-  R = { require('ufo').openAllFolds(), 'Open All Folds' },
-  M = { require('ufo').closeAllFolds(), 'Close All Folds' },
-}
+--local folding = {
+--  R = { require('ufo').openAllFolds(), 'Open All Folds' },
+--  M = { require('ufo').closeAllFolds(), 'Close All Folds' },
+--}
 wk.register(folding, { prefix = "z" })

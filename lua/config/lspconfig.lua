@@ -34,8 +34,8 @@ require('mason-lspconfig').setup_handlers {
     }
   end
 }
-require('ufo').setup({
-  provider_selector = function(bufnr, filetype, buftype)
-    return { 'lsp', 'indent' }
-  end
-})
+--require('ufo').setup({
+--  provider_selector = function(bufnr, filetype, buftype)
+--    return { 'lsp', 'indent' }
+--  end
+--})
