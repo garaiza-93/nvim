@@ -5,7 +5,7 @@ local packerGrp = new_group('packer', { clear = true })
 local lspGrp = new_group('lsp', { clear = true })
 
 local function conditionalFormat()
-  if string.match(vim.bo.filetype, "javascript") or string.match(vim.bo.filetype, "typescript") then
+  if string.match(vim.bo.filetype, 'javascript') or string.match(vim.bo.filetype, 'typescript') then
     vim.cmd('EslintFixAll') -- if eslint_lsp is used. i use eslint_lsp, i dunno about you.
   else
     vim.cmd('lua vim.lsp.buf.format()')
@@ -27,19 +27,7 @@ new_cmd(
     group = lspGrp
   }
 )
---Run :PackerSync whenever plugins.lua is updated
-new_cmd(
-  { 'BufWritePost' },
-  {
-    pattern = 'plugins.lua',
-    callback = function()
-      vim.cmd('luafile %')
-      vim.cmd('PackerCompile')
-      vim.cmd('PackerUpdate')
-    end,
-    group = packerGrp
-  }
-)
+
 -- Hide status/tab/cmd lines in alpha greeter
 new_cmd(
   { 'User' },

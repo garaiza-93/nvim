@@ -25,7 +25,7 @@ opt.mouse = 'a'
 -- Keys
 opt.timeoutlen = 300
 --Clipboard
-opt.clipboard:append { "unnamedplus" }
+opt.clipboard:append { 'unnamedplus' }
 -- LSP Settings
 vim.diagnostic.config({
     virtual_text = false,

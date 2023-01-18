@@ -1,7 +1,7 @@
 return {
   {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
+    'folke/which-key.nvim',
+    event = 'VeryLazy',
     dependencies = { 'nvim-telescope/telescope.nvim' },
     config = function()
       local wk = require('which-key')
@@ -60,13 +60,13 @@ return {
           name = 'Folds',
         }
     }
-    wk.register(general, { prefix = "<leader>" })
+    wk.register(general, { prefix = '<leader>' })
 
       --local folding = {
       --  R = { require('ufo').openAllFolds(), 'Open All Folds' },
       --  M = { require('ufo').closeAllFolds(), 'Close All Folds' },
       --}
-    wk.register(folding, { prefix = "z" })
+    wk.register(folding, { prefix = 'z' })
   end
   }
 }
