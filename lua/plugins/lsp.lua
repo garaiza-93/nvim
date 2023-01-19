@@ -1,12 +1,20 @@
 return
 {
-  { 'neovim/nvim-lspconfig' },
-  { 'jose-elias-alvarez/null-ls.nvim' },
-  { 'williamboman/mason.nvim', config = function() require('mason').setup {} end },
   {
-    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
+    event = 'BufReadPre',
+    dependencies = {
+      'jose-elias-alvarez/null-ls.nvim',
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'jayp0521/mason-null-ls.nvim', 
+      'hrsh7th/cmp-nvim-lsp'
+    },
     config = function() 
-      require('mason-lspconfig').setup()
+      require('mason').setup()
+      require('mason-lspconfig').setup {
+        automatic_installation = true;
+      }
 
       -- Automatically setup LSP servers
       local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -43,21 +51,17 @@ return
           }
         end
       }
-      --require('ufo').setup({
-      --  provider_selector = function(bufnr, filetype, buftype)
-      --    return { 'lsp', 'indent' }
-      --  end
-      --})
-    end
-  },
-  {
-    'jayp0521/mason-null-ls.nvim', 
-    config = function()
+
       require('null-ls').setup()
       require('mason-null-ls').setup({
         automatic_installation = true,
         automatic_setup = true
       })
+      --require('ufo').setup({
+      --  provider_selector = function(bufnr, filetype, buftype)
+      --    return { 'lsp', 'indent' }
+      --  end
+      --})
     end
   },
 }
