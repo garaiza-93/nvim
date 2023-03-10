@@ -1,6 +1,8 @@
 # Neovim Configuration
 
-My personal Neovim (nvim) setup. It's not where I want it just yet, but it's a good starting point for anyone who wants more out of it. There's a learning curve, but I encourage you to explore.
+**Archived as I now use [Nix to configure neovim](https://github.com/garaiza-93/nixos/blob/master/devtools/neovim/neovim.nix).
+
+My personal Neovim (nvim) setup. It's wasn't where I wanted it just yet, but it's a good starting point for anyone who wants more out of it. There's a learning curve, but I encourage you to explore.
 
 On first-time startup, nvim will install lazy and the included plugins.
 
